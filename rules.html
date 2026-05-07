@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>rules Details</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="position.css">
+  <link rel="stylesheet" href="rules.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="Volley101 Logo" class="logo-img" />
+      </a>
+    </div>
+    <div class="nav-links">
+            <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="#content">Learn</a>
+    <a href="#faq">Help</a>
+  </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero position-hero">
+    <button onclick="scrollToHeadline()">Letss GOO →</button>
+  </section>
+
+   <!-- HEADLINE SECTION -->
+    <section class="headline" id="master">
+      <div class="headline-overlay">
+        <img src="rules2.png" alt="Rules PNG" class="overlay-img" />
+        <img src="rules3.png" alt="Rules PNG" class="overlay1-img" />
+      </div>
+    </section>
+
+<!-- CONTENT SECTION -->
+ <section class="content" id="content">
+  <div class="content-overlay">
+    <img src="rules4.png" alt="Rules PNG" class="overlay2-img"/>
+    <img src="rules5.png" alt="Rules PNG" class="overlay3-img"/>
+  </div>
+ </section>
+
+  <section class="content secondary-content">
+    <div class="headline-overlay">
+      <img src="rules6.png" alt="Rules PNG" class="overlay4-img" />
+    </div>
+  </section>
+
+  <section class="content third-content">
+    <div class="headline-overlay">
+      <img src="rules7.png" alt="Rules PNG" class="overlay5-img" />
+    </div>
+  </section>
+
+
+
+<script>
+function scrollToHeadline() {
+  const element = document.getElementById('master');
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+const imageObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate');
+    } else {
+      entry.target.classList.remove('animate');
+    }
+  });
+}, {
+  threshold: 0.2,
+  rootMargin: '0px 0px -100px 0px'
+});
+// Observe all rule images
+const overlayImages = document.querySelectorAll('.overlay-img, .overlay1-img, .overlay2-img, .overlay3-img, .overlay4-img, .overlay5-img');
+overlayImages.forEach(img => imageObserver.observe(img));
+</script>
+ <footer class="footer">
+  <div class="button">
+      <a href="position.html">
+        <img src="left.png" alt="leftbutton" class="button-img" />
+      </a>
+      <div class="button1">
+      <a href="index.html">
+        <img src="right.png" alt="rightbutton" class="button-img" />
+      </a>
+
+</div>

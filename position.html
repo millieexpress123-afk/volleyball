@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Position Details</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="position.css">
+</head>
+<body>
+   <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="Volley101 Logo" class="logo-img" />
+      </a>
+    </div>
+    <div class="nav-links">
+            <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="#content">Learn</a>
+    <a href="#faq">Help</a>
+  </div>
+  </nav>
+  
+  <!-- HERO -->
+  <section class="hero position-hero">
+    <button onclick="scrollToHeadline()">wwowooow →</button>
+  </section>
+
+
+  
+ <!-- HEADLINE SECTION -->
+    <section class="headline" id="master">
+      <div class="headline-overlay">
+        <img src="overlay1.png" alt="Overlay1 PNG" class="overlay1-img" />
+      </div>
+    </section>
+
+
+
+
+  <!-- CONTENT -->
+  <section class="content" id="content">
+    <div class="headline-overlay">
+      <img src="overlay.png" alt="Overlay PNG" class="overlay-img" />
+    </div>
+  </section>
+
+  <section class="content secondary-content">
+    <div class="headline-overlay">
+      <img src="overlay2.png" alt="Overlay PNG" class="overlay-img" />
+    </div>
+  </section>
+
+  <section class="content third-content">
+    <div class="headline-overlay">
+      <img src="overlay3.png" alt="Overlay PNG" class="overlay-img" />
+    </div>
+  </section>
+
+  <section class="content fourth-content">
+    <div class="headline-overlay">
+      <img src="overlay4.png" alt="Overlay PNG" class="overlay-img" />
+    </div>
+  </section>
+
+  <section class="content fifth-content">
+    <div class="headline-overlay">
+      <img src="overlay5.png" alt="Overlay PNG" class="overlay-img" />
+    </div>
+  </section>
+   
+
+  <script>
+    let contextVisible = false;
+
+    function scrollToHeadline() {
+      const headline = document.getElementById('master');
+      if (headline) {
+        headline.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        } else {
+          entry.target.classList.remove('animate');
+        }
+      });
+    }, {
+      threshold: 0.2,
+      rootMargin: '0px 0px -100px 0px'
+    });
+
+    // Run observer setup immediately since script is at bottom of body
+    const overlayImages = document.querySelectorAll('.overlay1-img, .overlay-img');
+    overlayImages.forEach(img => imageObserver.observe(img));
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        showContext();
+      } else if (e.key === 'Escape') {
+        closeContext();
+      }
+    });
+
+    function showContext() {
+      const contextOverlay = document.getElementById('contextOverlay');
+      if (contextOverlay && !contextVisible) {
+        contextOverlay.classList.add('show');
+        contextVisible = true;
+      }
+    }
+
+    function closeContext() {
+      const contextOverlay = document.getElementById('contextOverlay');
+      if (contextOverlay && contextVisible) {
+        contextOverlay.classList.remove('show');
+        contextVisible = false;
+      }
+    }
+  </script>
+   <footer class="footer">
+  <div class="button">
+      <a href="training.html">
+        <img src="left.png" alt="leftbutton" class="button-img" />
+      </a>
+      <div class="button1">
+      <a href="rules.html">
+        <img src="right.png" alt="rightbutton" class="button-img" />
+      </a>
+</body>
+</html>

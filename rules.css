@@ -1,0 +1,208 @@
+.navbar {
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+    color: white;
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Baloo 2', sans-serif;
+    box-shadow: 0 2px 10px rgba(65, 105, 225, 0.3);
+    min-height: 60px;
+    position: relative;
+    z-index: 1000;
+}
+/* HERO */
+.position-hero {
+    background: url('rules1.jpg') no-repeat center top;
+    background-size: cover;
+    text-align: center;
+    padding: 150px 20px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* optional fixed attachment for parallax-style alignment */
+    /* background-attachment: fixed; */
+}
+
+.headline {
+    background: url('V2.jpg') no-repeat center top;
+   background-size: cover;
+    text-align: center;
+    padding: 150px 20px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-attachment: fixed; */
+}
+.headline {
+    position: relative;
+    height: 400px;
+}
+
+.headline-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.headline {
+    position: relative;
+    height: 100vh;
+}
+
+.overlay-img {
+    position: absolute;
+    width: 1570px;
+    top: 20-px;
+    left:-20px;
+}
+
+.overlay1-img {
+    position: absolute;
+    width: 1570px;
+    top: 20px;
+    right: -30px;
+}
+
+.content {
+    background: url('V3.jpg') no-repeat center top;
+   background-size: cover;
+    text-align: center;
+    padding: 150px 20px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-attachment: fixed; */
+}
+.content {
+    position: relative;
+    height: 400px;
+}
+
+.content-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.content {
+    position: relative;
+    height: 100vh;
+}
+
+.overlay2-img {
+    position: absolute;
+    width: 1570px;
+    top: 10px;
+    left:-20px;
+}
+
+.overlay3-img {
+    position: absolute;
+    width: 1570px;
+    top: 10px;
+    right: -30px;
+}
+
+.secondary-content {
+  background: url('V4.jpg') no-repeat center center;
+  background-size: cover;
+  box-shadow: none;
+  padding: 80px 20px;
+  min-height: 100vh;
+}
+.secondary-content {
+    position: relative;
+    height: 400px;
+}
+
+.seconndary-content-overlay {
+    position: absolute;
+    inset: 0;
+}
+
+.secondary-content {
+    position: relative;
+    height: 100vh;
+}
+
+.overlay4-img {
+    position: absolute;
+    width: 1550px;
+    top: 10px;
+    right:15px;
+}
+
+.third-content {
+  background: url('V7.jpg') no-repeat center center;
+  background-size: cover;
+  box-shadow: none;
+  padding: 80px 20px;
+  min-height: 100vh;
+}
+.third-content {
+    position: relative;
+    height: 100vh;
+}
+
+.overlay5-img {
+    position: absolute;
+    width: 1550px;
+    top: 10px;
+    right:20px;
+}
+
+.overlay-img, .overlay1-img, .overlay2-img, .overlay3-img, .overlay4-img, .overlay5-img {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.overlay-img.animate, .overlay1-img.animate, .overlay2-img.animate, .overlay3-img.animate, .overlay4-img.animate, .overlay5-img.animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.footer {
+  background-image: url('rules2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 200px;
+  position: relative;
+
+  overflow: hidden; /* prevents stuff from pushing background */
+}
+
+.button {
+  position: absolute;
+  top: -230px;
+  right: 50px;
+}
+
+.button-img {
+width: 100vw;
+}
+
+.button1 {
+  position: absolute;
+  top: 3px;
+  left: 100px;
+}
+
+

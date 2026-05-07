@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Volleyball Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="volleyball-page">
+
+    <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="Volley101 Logo" class="logo-img" />
+      </a>
+    </div>
+    <div class="nav-links">
+            <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="#content">Learn</a>
+    <a href="#faq">Help</a>
+  </div>
+
+</nav>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <button onclick="scrollToHeadline()">Start Learning →</button>
+    </section>
+
+    <!-- HEADLINE SECTION -->
+    <section class="headline" id="master">
+      <div class="headline-overlay">
+        <img src="headline.png" alt="headline1 PNG" class="head1-img" />
+      </div>
+      <div class="headline1-overlay">
+  <img src="headline1.png" alt="headline2 PNG" class="head2-img" onclick="scrollToContent()" />     
+</div> 
+</script>
+   </section>
+
+    <!-- CONTENT -->
+    <section class="content" id="content">
+      <section class="balls-section">
+        <div class="ball" onclick="openSkillsPage()" style="cursor:pointer;"><img src="skills.png" alt="Skills visual"><p>Skills</p></div>
+        <div class="ball" onclick="openPositionPage()" style="cursor:pointer;"><img src="position.png" alt="Position visual"><p>Position</p></div>
+        <div class="ball" onclick="openTrainingPage()" style="cursor:pointer"><img src="training.png" alt="Training visual"><p>Training</p></div>
+        <div class="ball" onclick="openRulesPage()" style="cursor:pointer;"><img src="rules.png" alt="Rules visual"><p>Rules</p></div>
+      </section>
+      <button onclick="scrollToFaq()" style="padding: 10px 25px; font-size: 16px; border: none; background-color: #FFD700; color: rgb(0, 0, 0); border-radius: 20px; cursor: pointer; position: absolute; bottom: 120px; left: 50%; transform: translateX(-50%); z-index: 10;">Go to FAQ →</button>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq-section">
+      <div class="book">
+        <img src="bookinfo.png" id="book" alt="open book" onclick="openBook()">
+      </div>
+    </section>
+
+    <script>
+      function scrollToHeadline() {
+        const element = document.getElementById('master');
+        if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function scrollToContent() {
+        const element = document.getElementById('content');
+        if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function scrollToFaq() {
+        const element = document.getElementById('faq');
+        if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function openBook() {
+        const book = document.getElementById('book');
+        if (!book) return;
+        if (book.src.includes('bookinfo.png')) {
+          book.src = 'bookinfo1.png';
+        } else {
+          book.src = 'bookinfo.png';
+        }
+      }
+
+      function openPositionPage() {
+        window.location.href = 'position.html';
+      }
+
+      function openRulesPage() {
+        window.location.href = 'rules.html';
+      }
+
+      function openTrainingPage() {
+        window.location.href = 'training.html';
+      }
+
+      function openSkillsPage() {
+        window.location.href = 'skills.html';
+      }
+
+      function goHome() {
+  window.location.href = 'volleyball.html';
+}
+    </script>
+
+
+<footer class="footer">
+  <h2>Thanks for Visiting 🏐</h2>
+
+  <p>
+    We hope you enjoyed exploring and learning more about volleyball with Volley101.
+  </p>
+
+  <p>Email us anytime:</p>
+  <p class="email">volley101@email.com</p>
+
+  <p class="bottom-text">
+    Made with passion for volleyball lovers.
+  </p>
+</footer>
+
+</body>
+</html>
+
