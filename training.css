@@ -63,15 +63,18 @@
 .Choo4-img,
 .overlay1-img,
 .overlay-img {
-    width: 250%;
+    width: 90%;
     max-width: 180vw;
     max-height: 85vh;
     height: auto;
     object-fit: contain;
     display: block;
     opacity: 0;
-    transform: scale(0.8);
+    transform: scale(0.8) translate(-50%, -50%);
     transition: opacity 0.5s ease, transform 0.5s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
 
 
@@ -82,7 +85,7 @@
 .overlay1-img.animate,
 .overlay-img.animate {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1) translate(-50%, -50%);
 }
 
 @keyframes popOut {
@@ -287,8 +290,7 @@ width: 100vw;
     padding: 60px 15px;
   }
   .Choo1-img, .Choo2-img, .Choo3-img, .Choo4-img, .overlay1-img, .overlay-img {
-    width: 90%;
-    max-width: 90vw;
+    width: 95%;
   }
   .context-content {
     width: 80%;
@@ -314,8 +316,7 @@ width: 100vw;
     font-size: 16px;
   }
   .Choo1-img, .Choo2-img, .Choo3-img, .Choo4-img, .overlay1-img, .overlay-img {
-    width: 95%;
-    max-width: 95vw;
+    width: 98%;
   }
   .context-content {
     width: 90%;

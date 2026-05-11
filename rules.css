@@ -61,9 +61,12 @@
 
 .overlay-img {
     position: absolute;
-    width: 1570px;
-    top: 20-px;
-    right: 40px;
+    width: 90%;
+    max-width: 1570px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -100,9 +103,12 @@
 
 .overlay2-img {
     position: absolute;
-    width: 1570px;
-    top: 10px;
-    left:-20px;
+    width: 90%;
+    max-width: 1570px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -131,9 +137,12 @@
 
 .overlay4-img {
     position: absolute;
-    width: 1550px;
-    top: 10px;
-    right:15px;
+    width: 90%;
+    max-width: 1550px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .third-content {
@@ -166,10 +175,7 @@
     padding: 60px 15px;
   }
   .overlay-img, .overlay2-img, .overlay4-img {
-    width: 90%;
-    max-width: 90vw;
-    position: static;
-    margin: 0 auto;
+    width: 95%;
   }
 }
 
@@ -185,8 +191,7 @@
     font-size: 16px;
   }
   .overlay-img, .overlay2-img, .overlay4-img {
-    width: 95%;
-    max-width: 95vw;
+    width: 98%;
   }
 }
 
