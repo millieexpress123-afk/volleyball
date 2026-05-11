@@ -109,24 +109,21 @@
 
 .overlay1-img,
 .overlay-img {
-    width: 90%;
+    width: 300%;
     max-width: 200vw;
     max-height: 95vh;
     height: auto;
     object-fit: contain;
     display: block;
     opacity: 0;
-    transform: scale(0.8) translate(-50%, -50%);
+    transform: scale(0.8);
     transition: opacity 0.5s ease, transform 0.5s ease;
-    position: absolute;
-    top: 50%;
-    left: 50%;
 }
 
 .overlay1-img.animate,
 .overlay-img.animate {
     opacity: 1;
-    transform: scale(1) translate(-50%, -50%);
+    transform: scale(1);
 }
 
 @keyframes popOut {
@@ -295,55 +292,5 @@ width: 100vw;
   position: absolute;
   top: 3px;
   left: 100px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 10px 15px;
-  }
-  .hero {
-    padding: 100px 15px;
-  }
-  .hero h1 {
-    font-size: 36px;
-  }
-  .hero p {
-    font-size: 18px;
-  }
-  .headline, .content, .secondary-content, .third-content, .fourth-content, .fifth-content {
-    padding: 60px 15px;
-  }
-  .overlay1-img, .overlay-img {
-    width: 95%;
-  }
-  .context-content {
-    max-width: 95vw;
-  }
-  .button-img {
-    width: 90vw;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar {
-    flex-direction: column;
-    padding: 10px;
-  }
-  .hero h1 {
-    font-size: 28px;
-  }
-  .hero p {
-    font-size: 16px;
-  }
-  .overlay1-img, .overlay-img {
-    width: 98%;
-  }
-  .context-content {
-    max-width: 98vw;
-  }
-  .button-img {
-    width: 95vw;
-  }
 }
 
