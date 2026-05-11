@@ -269,3 +269,63 @@ width: 100vw;
   left: 100px;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+  .hero {
+    padding: 100px 15px;
+  }
+  .hero h1 {
+    font-size: 36px;
+  }
+  .hero p {
+    font-size: 18px;
+  }
+  .headline, .content, .secondary-content, .third-content, .fourth-content, .fifth-content {
+    padding: 60px 15px;
+  }
+  .Choo1-img, .Choo2-img, .Choo3-img, .Choo4-img, .overlay1-img, .overlay-img {
+    width: 90%;
+    max-width: 90vw;
+  }
+  .context-content {
+    width: 80%;
+    max-width: 95vw;
+  }
+  .context-img {
+    width: 80%;
+  }
+  .button-img {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .hero h1 {
+    font-size: 28px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+  .Choo1-img, .Choo2-img, .Choo3-img, .Choo4-img, .overlay1-img, .overlay-img {
+    width: 95%;
+    max-width: 95vw;
+  }
+  .context-content {
+    width: 90%;
+    max-width: 98vw;
+  }
+  .context-img {
+    width: 90%;
+  }
+  .button-img {
+    width: 95vw;
+  }
+}
+
